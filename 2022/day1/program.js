@@ -17,9 +17,18 @@ input.forEach(line => {
 
 elfs.push(elf);
 
+// Part 1
 const elfsSorted = SortsElfsCalories(elfs);
-console.log('❓ Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?')
-console.log(`❗️ This elf carrying ${elfsSorted[0].Items.length} snacks contains ${elfsSorted[0].calories} calories.`);
+console.log('❓P1 » Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?')
+console.log(`❗️P1 » This elf carrying ${elfsSorted[0].Items.length} snacks contains ${elfsSorted[0].calories} calories.`);
+
+// Part 2
+const elfTop3 = elfsSorted.slice(0, 3);
+const caloriesTotal = elfTop3.reduce((acc, elf) => acc + elf.calories, 0);
+const itemsTotal = elfTop3.reduce((acc, elf) => acc + elf.Items.length, 0);
+console.log('❓P2 » Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?')
+console.log(`❗️P2 » These three elves carrying ${itemsTotal} snacks contains ${caloriesTotal} calories.`);
+
 
 // -- Functions --
 function getElfStatisitcs() {
