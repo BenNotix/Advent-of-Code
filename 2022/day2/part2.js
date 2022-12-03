@@ -43,5 +43,5 @@ const answer = input
 
 const executionEnd = performance.now();
 const ms = (executionEnd - executionStart) * 1000;
-console.log("❓P2 » En suivant les instructions de l'Elfe pour la deuxième colonne, quel serait votre score total si tout se passe exactement comme dans votre guide de stratégie ?")
+console.log("❓P2 » Following the Elf's instructions for the second column, what would your total score be if everything goes exactly according to your strategy guide?")
 console.log(`❗️P2 » Your total score is ${answer} (in  ${ms.toFixed(2)}ms).`);
